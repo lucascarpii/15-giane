@@ -299,7 +299,7 @@
 }
 #tasks-container h2 {
   padding: 12px;
-  background-color: var(--sky-600);
+  background-color: var(--neutral-600);
   border-radius: 4px;
   text-align: center;
   color: white;
