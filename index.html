@@ -76,9 +76,7 @@
         <div class="container-fluid">
           <div class="navbar-brand">
             <span class="navbar-caption-wrap"
-              ><a
-                class="navbar-caption text-black display-7"
-                href="#"
+              ><a class="navbar-caption text-black display-7" href="#"
                 >Mis 15 Giane</a
               ></span
             >
@@ -174,6 +172,7 @@
       </div>
     </section>
     <!-- Invitado -->
+
     <section
       data-bs-version="5.1"
       class="content4 cid-t2mIwWuNZc"
@@ -190,17 +189,18 @@
             <h4
               class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-1"
             >
-             <strong>Nombre cualquiera</strong>
+              <strong id="invitadoname"></strong>
             </h4>
             <h3
-              class="mbr-section-title mbr-fonts-style align-center mb-4 display-5"
+              class="mbr-section-title mbr-fonts-style align-center mb-4 display-5" id="cantinv"
             >
-              Vale por 1 invitacion
+              
             </h3>
           </div>
         </div>
       </div>
     </section>
+
     <!-- Frase y contador -->
     <section
       data-bs-version="5.1"
@@ -464,7 +464,10 @@
         </div>
         <div class="row justify-content-center mt-4">
           <div class="card col-12 col-lg-6">
-            <div class="card-wrapper">
+            <a
+              href="https://api.whatsapp.com/send/?phone=5492995505658&text=Hola!+te+confirmo+la+asistencia+al+cumple+de+Giane&app_absent=0"
+              class="card-wrapper"
+            >
               <div class="card-box align-center">
                 <div class="image-wrapper">
                   <span
@@ -476,10 +479,13 @@
                   <strong>Confirmar con la Stelita</strong>
                 </h4>
               </div>
-            </div>
+            </a>
           </div>
           <div class="card col-12 col-lg-6">
-            <div class="card-wrapper">
+            <a
+              href="https://api.whatsapp.com/send/?phone=5492995505658&text=Hola!+te+confirmo+la+asistencia+al+cumple+de+Giane&app_absent=0"
+              class="card-wrapper"
+            >
               <div class="card-box align-center">
                 <div class="image-wrapper">
                   <span
@@ -493,7 +499,7 @@
                   <strong>Confirmar con el Diegaso</strong>
                 </h4>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -551,5 +557,7 @@
     <script src="assets/dropdown/js/navbar-dropdown.js"></script>
     <script src="assets/countdown/countdown.js"></script>
     <script src="assets/formoid/formoid.min.js"></script>
+
+    <script type="module" src="assets/app.js"></script>
   </body>
 </html>

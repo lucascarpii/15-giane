@@ -12,10 +12,18 @@ const tasksContainer = document.querySelector("#tasks-container");
 let editStatus = false;
 let editingId = "";
 
+function copyLink(link) {
+  let estructura = `http://127.0.0.1:5500/index.html?idin=${link}`;
+  navigator.clipboard
+    .writeText(estructura)
+    .then(() => console.log(`${link} Copiado al portapapeles`));
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
   onGetTasks((querySnapshot) => {
+    let cantTotalInvitados = querySnapshot.docs.length;
     let html = `
-        <h2>Tareas a realizar</h2>
+        <h2>Lista de invitados, total: ${cantTotalInvitados}</h2>
         `;
     querySnapshot.forEach((doc) => {
       const task = doc.data();
@@ -28,6 +36,7 @@ window.addEventListener("DOMContentLoaded", async () => {
         <div>
           <button class="btn-delete" data-id="${doc.id}"> Eliminar </button>
           <button class="btn-edit" data-id="${doc.id}"> Editar </button>
+          <button class="btn-link" data-id="${doc.id}"> Link </button>
         </div>
       </div>
     `;
@@ -56,6 +65,15 @@ window.addEventListener("DOMContentLoaded", async () => {
 
         taskForm["btn-task-save"].innerText = "Actualizar";
         taskForm["btn-task-save"].classList.toggle("editing");
+      });
+    });
+
+    const btnsLink = tasksContainer.querySelectorAll(".btn-link");
+    btnsLink.forEach((btn) => {
+      btn.addEventListener("click", ({ target: { dataset } }) => {
+        copyLink(dataset.id);
+        btn.classList.add("copied");
+        setTimeout(() => btn.classList.remove("copied"),3000);
       });
     });
   });

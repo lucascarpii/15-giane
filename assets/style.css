@@ -320,10 +320,12 @@
 .task button {
   height: 34px;
   min-width: 34px;
-  border: none;
+  border: 2px solid var(--gray-700);
   border-radius: 4px;
   cursor: pointer;
   color: white;
+  background-color: var(--gray-600);
+  font-weight: 500;
 
   display: flex;
   align-items: center;
@@ -338,11 +340,16 @@
 }
 .task button:nth-child(1) {
   background-color: var(--red-600);
+  border:2px solid var(--red-700);
 }
 .task button:nth-child(2) {
   background-color: var(--sky-600);
+  border:2px solid var(--sky-700);
 }
 
+.task button:hover {
+  background-color: var(--gray-700);
+}
 .task button:nth-child(1):hover {
   background-color: var(--red-700);
 }
@@ -352,6 +359,12 @@
 
 .task button ion-icon {
   font-size: 18px;
+}
+
+.task button.copied{
+  color: var(--gray-600);
+  border: 2px solid var(--gray-600);
+  background-color: var(--gray-50);
 }
 
 @media (min-width: 768px) {

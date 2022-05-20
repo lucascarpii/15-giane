@@ -10,15 +10,11 @@
   <body>
     <div class="container">
       <form id="task-form">
-        <label for="title">Título</label>
-        <input type="text" placeholder="Título de la tarea" id="task-title" />
+        <label for="title">Nombre del invitado</label>
+        <input type="text" placeholder="Nombre del invitado" id="task-title" />
 
-        <label for="description">Descripción</label>
-        <textarea
-          id="task-description"
-          rows="3"
-          placeholder="Descripción de la tarea"
-        ></textarea>
+        <label for="description">Por cuantas invitaciones vale?</label>
+        <input type="number" value="1" placeholder="Cantidad de invitaciones" id="task-description">
 
         <button id="btn-task-save" class="">Guardar</button>
       </form>
