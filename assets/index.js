@@ -13,7 +13,7 @@ let editStatus = false;
 let editingId = "";
 
 function copyLink(link) {
-  let estructura = `https://tamnora.com/index.html?idin=${link}`;
+  let estructura = `https://tamnora.com/mis-15-gian/index.html?idin=${link}`;
   navigator.clipboard
     .writeText(estructura)
     .then(() => console.log(`${link} Copiado al portapapeles`));
